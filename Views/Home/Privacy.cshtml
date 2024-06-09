@@ -1,0 +1,20 @@
+﻿@model EmployeeManagementSystem.Services.WeatherResponse
+@{
+    ViewData["Title"] = "Weather";
+}
+<h2>@ViewData["Title"]</h2>
+
+@using (Html.BeginForm("Index", "Weather", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" class="form-control" id="city" name="city" placeholder="Enter city">
+    </div>
+    <button type="submit" class="btn btn-primary">Get Weather</button>
+}
+
+@if (Model != null)
+{
+    <h3>Weather in @Model.Name</h3>
+    <p>Temperature: @Model.Main.Temp &deg;C</p>
+}
