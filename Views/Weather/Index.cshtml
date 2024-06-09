@@ -1,8 +1,10 @@
 ﻿@model EmployeeManagementSystem.Services.WeatherResponse
+
 @{
-    ViewData["Title"] = "Weather";
+    ViewBag.Title = "Weather";
 }
-<h2>@ViewData["Title"]</h2>
+
+<h2>Weather</h2>
 
 @using (Html.BeginForm("Index", "Weather", FormMethod.Post))
 {
